@@ -17,7 +17,7 @@ import java.util.concurrent.Executors;
  * </ul>
  * <p>
  * A typical use is to divide a problem into <strong>N</strong> independently solvable tasks and create a <code>CountDownLatch</code>
- * with a value of <string>N</string>
+ * with a value of <strong>N</strong>
  * <p>When each task is finished it calls <code>countDown()</code>on the latch. Tasks waiting for the problem to be solved call
  * <code>await()</code>on the latch to hold themselves back until it is completed.</p>
  * <p>For example: You want to trigger something something after 10 000 users download an image.</p>
@@ -38,11 +38,11 @@ public class CountDownLatchDemo {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
         System.out.println("all work done");
         singleThreadExecutor.shutdown();
 
     }
-
 }
 
 class Worker implements Runnable {
