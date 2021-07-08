@@ -1,4 +1,4 @@
-package com.davidmiller.latch;
+package com.github.dmiller2117.latch;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
