@@ -7,6 +7,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
+ * <h2>CyclicBarrier</h2>
  * <p>
  * A CyclicBarrier is used in situations where you want to create a group of tasks to perform work in parrallel and
  * wait until they are all finished before moving onto the next step:
