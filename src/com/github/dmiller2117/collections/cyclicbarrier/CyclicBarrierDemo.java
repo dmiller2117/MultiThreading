@@ -1,4 +1,4 @@
-package com.github.dmiller2117.cyclicbarrier;
+package com.github.dmiller2117.collections.cyclicbarrier;
 
 import java.util.Random;
 import java.util.concurrent.BrokenBarrierException;

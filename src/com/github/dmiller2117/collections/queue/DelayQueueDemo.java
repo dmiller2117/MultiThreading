@@ -1,4 +1,4 @@
-package com.github.dmiller2117.queue;
+package com.github.dmiller2117.collections.queue;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.DelayQueue;
