@@ -6,6 +6,8 @@ public class App {
 
     public static void main(String[] args) {
         Random random = new Random();
+        // If you reduce the size of this numbers array, you will find the sequential algorithm will be faster
+        // This is due to the thread communication overhead.
         int[] numbers = new int[100000000];
 
         for (int i = 0; i < numbers.length; i++) {
