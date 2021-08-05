@@ -1,8 +1,9 @@
 package com.github.dmiller2117.forkjoin;
 
 import java.util.concurrent.ForkJoinPool;
+import java.util.concurrent.RecursiveAction;
 
-public class ForkJoinApp {
+public class RecursiveActionApp {
 
     /*
      * fork():  asynchronously execute the given task in the pool
@@ -16,7 +17,7 @@ public class ForkJoinApp {
 
         ForkJoinPool pool = new ForkJoinPool(Runtime.getRuntime().availableProcessors());
 
-        SimpleRecursiveAction simpleRecursiveAction = new SimpleRecursiveAction(120);
+        RecursiveAction simpleRecursiveAction = new SimpleRecursiveAction(120);
         pool.invoke(simpleRecursiveAction);
 
     }
