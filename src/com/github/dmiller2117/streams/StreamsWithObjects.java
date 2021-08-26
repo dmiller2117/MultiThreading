@@ -24,7 +24,8 @@ public class StreamsWithObjects {
         students.stream().filter(s -> s.isLocal() == true).forEach(s -> System.out.println(s.getName()));
 
         System.out.println("count the local students:");
-        long count = students.stream().filter(s -> s.isLocal() == true).count();
+        // using a method reference for isLocal
+        long count = students.stream().filter(Student::isLocal).count();
         System.out.printf("There are %d local students", count);
         System.out.println();
 
