@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 public class StreamsWithObjects {
 
+    @SuppressWarnings("Convert2MethodRef")
     public static void main(String[] args) {
         List<Student> students = new ArrayList<>();
         students.add(new Student("Adam", true));
@@ -21,7 +22,7 @@ public class StreamsWithObjects {
         students.stream().map(Student::getName).filter(x -> x.startsWith("D")).forEach(System.out::println);
 
         System.out.println("print the local students:");
-        students.stream().filter(s -> s.isLocal() == true).forEach(s -> System.out.println(s.getName()));
+        students.stream().filter(s -> s.isLocal()).forEach(s -> System.out.println(s.getName()));
 
         System.out.println("count the local students:");
         // using a method reference for isLocal()
@@ -35,7 +36,7 @@ public class StreamsWithObjects {
         System.out.println(names);
 
         System.out.println("we can construct a single string of non-local students:");
-        names = students.stream().filter(s -> s.isLocal() == false).map(Student::getName).collect(Collectors.joining(" "));
+        names = students.stream().filter(s -> !s.isLocal()).map(Student::getName).collect(Collectors.joining(" "));
         System.out.print(names);
     }
 }
