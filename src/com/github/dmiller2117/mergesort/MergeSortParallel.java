@@ -10,7 +10,6 @@ public class MergeSortParallel {
         this.tempArray = new int[numbers.length];
     }
 
-
     public void parallelMergeSort(int low, int high, int numberOfThreads) {
         if (numberOfThreads <= 1) {
             mergeSort(low, high);
@@ -51,13 +50,6 @@ public class MergeSortParallel {
         merge(low, middle, high);
     }
 
-    public void showResult() {
-        for (int number : numbers) {
-            System.out.print(number + " ");
-        }
-        System.out.println();
-    }
-
     void merge(int low, int middle, int high) {
         if (high + 1 - low >= 0) System.arraycopy(numbers, low, tempArray, low, high + 1 - low);
         int i = low;
@@ -90,15 +82,5 @@ public class MergeSortParallel {
             j++;
         }
     }
-
-    public boolean isSorted() {
-        for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] > numbers[i + 1]) {
-                return false;
-            }
-        }
-        return true;
-    }
-
 
 }
